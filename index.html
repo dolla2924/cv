@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السيرة الذاتية لـ د. [اسمك الكامل]</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter for a modern, clean look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles & Variables */
+        :root {
+            --primary-dark-green: #1A523A; /* Darker green for a professional feel */
+            --secondary-green: #2E8B57; /* Sea Green - main agricultural color */
+            --accent-gold: #FFC107; /* Amber - for highlights and calls to action */
+            --dark-bg: #212121; /* Dark grey for sections */
+            --light-text: #F5F5F5; /* Light grey for text */
+            --medium-grey: #B0BEC5; /* Medium grey for subtle details */
+            --card-bg: rgba(255, 255, 255, 0.08); /* Semi-transparent background for cards */
+            --border-color: rgba(255, 255, 255, 0.15); /* Light border for elements */
+            --transition-speed: 0.4s;
+            --border-radius: 12px;
+            --font-inter: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font-inter);
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--primary-dark-green) 0%, var(--secondary-green) 100%); /* Green gradient background */
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            color: var(--light-text);
+            line-height: 1.7;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Gradient Animation for Body */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 1000px; /* Slightly narrower for CV feel */
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: rgba(33, 33, 33, 0.9); /* Darker, semi-transparent header */
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            padding: 18px 0;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .header-scrolled {
+            padding: 12px 0;
+            background: rgba(33, 33, 33, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: var(--light-text);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            color: var(--accent-gold);
+            margin-left: 10px;
+            font-size: 2.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all var(--transition-speed) ease;
+            position: relative;
+            padding: 8px 0;
+            font-size: 1.05rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--accent-gold);
+            border-radius: 2px;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section - Focused on Personal Branding */
+        .hero {
+            min-height: 85vh; /* Slightly less than full viewport height */
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.2); /* Subtle overlay for content readability */
+            box-shadow: inset 0 -50px 50px rgba(0,0,0,0.3); /* Shadow at bottom of hero */
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 2;
+            padding: 20px;
+        }
+
+        .profile-picture {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--accent-gold);
+            box-shadow: 0 0 0 8px rgba(255, 193, 7, 0.3);
+            margin-bottom: 30px;
+            animation: zoomIn 1s ease-out;
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .hero h1 {
+            font-size: 4.2rem;
+            margin-bottom: 15px;
+            line-height: 1.25;
+            animation: fadeInDown 1s ease;
+            font-weight: 700;
+            color: var(--light-text);
+        }
+
+        .hero h2 { /* For the sub-title/specialization */
+            font-size: 1.8rem;
+            color: var(--secondary-green);
+            margin-bottom: 30px;
+            animation: fadeInDown 1s ease 0.2s;
+            font-weight: 500;
+        }
+
+        .hero p.summary-text { /* For the short professional summary */
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.4s both;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 15px 35px;
+            background: var(--accent-gold);
+            color: var(--dark-bg);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all var(--transition-speed) ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(255, 193, 7, 0.4);
+            font-size: 1.1rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(255, 193, 7, 0.6);
+            background: #FFD700;
+        }
+
+        .btn.secondary { /* A secondary button style */
+            background: var(--secondary-green);
+            color: var(--light-text);
+            box-shadow: 0 8px 25px rgba(46, 139, 87, 0.4);
+        }
+        .btn.secondary:hover {
+            background: #3CB371; /* Slightly lighter green on hover */
+            box-shadow: 0 12px 30px rgba(46, 139, 87, 0.6);
+        }
+
+        /* General Section Styling */
+        section {
+            padding: 100px 0; /* Slightly less padding for CV feel */
+            position: relative;
+            z-index: 3;
+            background: var(--dark-bg); /* Dark background for sections */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Subtle separator */
+        }
+        section:nth-of-type(even) { /* Alternate section background for visual break */
+            background: rgba(40, 40, 40, 0.9);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            display: inline-block;
+            position: relative;
+            padding-bottom: 15px;
+            font-weight: 700;
+            color: var(--light-text);
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent-gold);
+            border-radius: 2px;
+        }
+
+        /* About Section - Professional Summary */
+        .about-content {
+            display: flex;
+            flex-direction: column; /* Stack for CV-like flow */
+            align-items: center;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--secondary-green);
+            font-weight: 600;
+        }
+
+        .about-text p {
+            margin-bottom: 25px;
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .education-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            transition: all var(--transition-speed) ease;
+            text-align: right; /* Align text right for Arabic */
+        }
+
+        .education-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            background: rgba(46, 139, 87, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .education-card i {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+            display: block; /* Ensure icon is on its own line */
+        }
+
+        .education-card h3 {
+            font-size: 1.6rem;
+            color: var(--secondary-green);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .education-card .degree-info {
+            font-size: 1.1rem;
+            color: var(--medium-grey);
+            margin-bottom: 10px;
+        }
+
+        .education-card .thesis-title {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        /* Experience Section - Timeline */
+        .experience-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--border-color);
+            border-radius: 2px;
+            z-index: -1;
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse; /* Alternate sides */
+        }
+
+        .timeline-item-content {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            width: 45%;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-color);
+            transition: all var(--transition-speed) ease;
+        }
+
+        .timeline-item-content:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .timeline-item-content h3 {
+            font-size: 1.6rem;
+            color: var(--secondary-green);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .timeline-item-content .company-name {
+            font-size: 1.1rem;
+            color: var(--medium-grey);
+            margin-bottom: 10px;
+        }
+
+        .timeline-item-content .duration {
+            font-size: 0.95rem;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .timeline-item-content ul {
+            list-style: none;
+            padding-right: 20px; /* For bullet points */
+        }
+
+        .timeline-item-content ul li {
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+            opacity: 0.9;
+            position: relative;
+        }
+        .timeline-item-content ul li::before {
+            content: "\2022"; /* Unicode for bullet */
+            color: var(--accent-gold);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-right: -1em;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 25px;
+            height: 25px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+            border: 4px solid var(--dark-bg);
+            z-index: 1;
+        }
+
+        /* Research & Publications Section */
+        .publications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .publication-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            transition: all var(--transition-speed) ease;
+        }
+
+        .publication-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            background: rgba(46, 139, 87, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .publication-card h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-green);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .publication-card .journal-info {
+            font-size: 0.95rem;
+            color: var(--medium-grey);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .publication-card p {
+            font-size: 1.05rem;
+            opacity: 0.85;
+            margin-bottom: 20px;
+        }
+
+        .publication-card a.btn {
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            box-shadow: none;
+        }
+        .publication-card a.btn:hover {
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+        }
+
+        /* Skills Section */
+        .skills-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .skills-category {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            flex: 1;
+            min-width: 300px;
+            transition: all var(--transition-speed) ease;
+        }
+        .skills-category:hover {
+            transform: translateY(-8px) scale(1.02);
+            background: rgba(46, 139, 87, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .skills-category h3 {
+            font-size: 1.8rem;
+            color: var(--secondary-green);
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .skills-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .skills-list li {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+        .skills-list li:hover {
+            background: var(--accent-gold);
+            color: var(--dark-bg);
+            transform: scale(1.05);
+        }
+        .skills-list li i {
+            color: var(--accent-gold); /* Default icon color */
+        }
+        .skills-list li:hover i {
+            color: var(--dark-bg); /* Icon color on hover */
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            gap: 60px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .contact-form-wrapper {
+            flex: 2;
+            min-width: 300px;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-form-wrapper h3 {
+            font-size: 2rem;
+            color: var(--secondary-green);
+            margin-bottom: 30px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 1.05rem;
+            color: var(--medium-grey);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--light-text);
+            font-size: 1rem;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.2);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-info-wrapper {
+            flex: 1;
+            min-width: 280px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .info-box {
+            display: flex;
+            align-items: flex-start;
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            transition: all var(--transition-speed) ease;
+        }
+
+        .info-box:hover {
+            transform: translateX(10px) scale(1.02);
+            background: rgba(46, 139, 87, 0.2);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-box i {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-left: 20px;
+            flex-shrink: 0;
+        }
+
+        .info-text h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            color: var(--secondary-green);
+            font-weight: 600;
+        }
+
+        .info-text p, .info-text a {
+            font-size: 1.05rem;
+            color: var(--medium-grey);
+            text-decoration: none;
+            transition: color var(--transition-speed) ease;
+        }
+        .info-text a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            padding: 60px 0 30px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .footer-logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: var(--accent-gold);
+        }
+
+        .footer-content p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        .footer-social-icons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .footer-social-icons a {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            transition: all var(--transition-speed) ease;
+            color: var(--light-text);
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .footer-social-icons a:hover {
+            background: var(--secondary-green);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+            font-size: 0.95rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Scroll-triggered fade-in effect */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            .hero p.summary-text {
+                font-size: 1.1rem;
+            }
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+            .education-grid, .publications-grid, .skills-content {
+                grid-template-columns: 1fr; /* Stack columns */
+                max-width: 600px;
+            }
+            .education-card, .publication-card, .skills-category {
+                width: 100%;
+            }
+            .experience-timeline::before {
+                left: 20px; /* Move timeline line to left */
+                transform: translateX(0);
+            }
+            .timeline-item {
+                flex-direction: column; /* Stack items vertically */
+                align-items: flex-start; /* Align content to left */
+                margin-bottom: 40px;
+            }
+            .timeline-item-content {
+                width: 100%;
+                padding: 25px;
+                margin-left: 50px; /* Offset content from line */
+            }
+            .timeline-item:nth-child(odd) .timeline-item-content {
+                margin-right: 0;
+                margin-left: 50px;
+            }
+            .timeline-dot {
+                left: 20px;
+                transform: translateX(-50%); /* Keep dot centered on the line */
+            }
+            .contact-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .contact-form-wrapper, .contact-info-wrapper {
+                width: 100%;
+                max-width: 600px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 100%;
+                background: rgba(33, 33, 33, 0.98);
+                padding: 20px 0;
+                transition: all var(--transition-speed) ease;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+                text-align: center;
+            }
+            .nav-links li a {
+                font-size: 1.2rem;
+            }
+
+            .hamburger {
+                display: block;
+                cursor: pointer;
+                font-size: 1.8rem;
+                color: var(--light-text);
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero h2 {
+                font-size: 1.3rem;
+            }
+            .hero p.summary-text {
+                font-size: 1rem;
+            }
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+            .profile-picture {
+                width: 150px;
+                height: 150px;
+            }
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            .education-card h3, .publication-card h3, .skills-category h3 {
+                font-size: 1.4rem;
+            }
+            .contact-form-wrapper h3 {
+                font-size: 1.6rem;
+            }
+            .info-box i {
+                font-size: 1.6rem;
+            }
+            .info-text h3 {
+                font-size: 1.2rem;
+            }
+            .footer-logo {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero h2 {
+                font-size: 1.1rem;
+            }
+            .profile-picture {
+                width: 120px;
+                height: 120px;
+            }
+            .btn-group {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .btn {
+                width: 80%;
+                max-width: 250px;
+                margin: 0 auto;
+            }
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+            .education-card, .publication-card, .skills-category, .contact-form-wrapper, .info-box {
+                padding: 20px;
+            }
+            .timeline-item-content {
+                margin-left: 40px;
+            }
+            .timeline-dot {
+                left: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">د. [اسمك] <i class="fas fa-seedling"></i></a> <!-- Logo with a seedling icon -->
+                <ul class="nav-links">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">الخلاصة</a></li>
+                    <li><a href="#education">التعليم</a></li>
+                    <li><a href="#experience">الخبرات</a></li>
+                    <li><a href="#research">الأبحاث</a></li>
+                    <li><a href="#skills">المهارات</a></li>
+                    <li><a href="#contact">تواصل معي</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section - Main Introduction & Profile Picture -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <!-- Placeholder for your professional profile picture -->
+                <!-- Replace 'https://placehold.co/180x180/2E8B57/FFFFFF?text=صورتك' with your actual image URL -->
+                <img src="https://placehold.co/180x180/2E8B57/FFFFFF?text=صورتك" alt="صورة شخصية لـ د. [اسمك الكامل]" class="profile-picture">
+                
+                <h1>د. <span class="highlight">[اسمك الكامل]</span></h1>
+                <h2>مهندس زراعي | خبير في [تخصصك الرئيسي]</h2>
+                <p class="summary-text">
+                    دكتور ومهندس زراعي متخصص يتمتع بخبرة تزيد عن [عدد] سنوات في [اذكر أهم 2-3 مجالات تخصصك، مثل: إدارة الموارد المائية، تحسين إنتاجية المحاصيل، الزراعة المستدامة]. أجمع بين المعرفة الأكاديمية العميقة والخبرة العملية المثبتة في تنفيذ المشاريع الزراعية المتكاملة، وتطوير حلول مبتكرة لمواجهة التحديات الزراعية الحديثة.
+                </p>
+                
+                <div class="btn-group">
+                    <a href="#contact" class="btn">تواصل معي <i class="fas fa-envelope"></i></a>
+                    <a href="#experience" class="btn secondary">استكشف خبراتي <i class="fas fa-briefcase"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - Professional Summary (Detailed) -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>الخلاصة الاحترافية</h2>
+            </div>
+            
+            <div class="about-content fade-in">
+                <p>
+                    أنا د. [اسمك الكامل]، مهندس زراعي حاصل على درجة الدكتوراه في [تخصص الدكتوراه]. بخبرة تزيد عن [عدد] سنوات في [اذكر مجالاتك الرئيسية]. أكرس جهودي لتطوير حلول زراعية مستدامة وفعالة، تهدف إلى زيادة الإنتاجية وتحسين جودة المحاصيل مع الحفاظ على البيئة.
+                </p>
+                <p>
+                    خلال مسيرتي المهنية والأكاديمية، عملت على [اذكر أبرز نوعين من المشاريع أو الأبحاث التي قمت بها، مثل: "تطوير نظم ري ذكية، وتحسين خصوبة التربة باستخدام التقنيات الحديثة"]. شغفي يكمن في تطبيق أحدث الابتكارات العلمية لخدمة القطاع الزراعي وتحقيق أقصى استفادة من الموارد الطبيعية.
+                </p>
+                <!-- Key achievements or mission statement can go here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <div class="section-title">
+                <h2>التعليم والمؤهلات الأكاديمية</h2>
+            </div>
+            
+            <div class="education-grid">
+                <!-- PhD Card -->
+                <div class="education-card fade-in">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>دكتوراه الفلسفة في [تخصص الدكتوراه]</h3>
+                    <span class="degree-info">[اسم الجامعة، المدينة، الدولة]</span>
+                    <span class="degree-info">[سنة التخرج]</span>
+                    <p class="thesis-title">رسالة الدكتوراه: "[عنوان رسالة الدكتوراه وأهميتها باختصار شديد، إن أمكن]"</p>
+                </div>
+
+                <!-- Master's Card -->
+                <div class="education-card fade-in">
+                    <i class="fas fa-book-open"></i>
+                    <h3>ماجستير العلوم في [تخصص الماجستير]</h3>
+                    <span class="degree-info">[اسم الجامعة، المدينة، الدولة]</span>
+                    <span class="degree-info">[سنة التخرج]</span>
+                </div>
+
+                <!-- Bachelor's Card -->
+                <div class="education-card fade-in">
+                    <i class="fas fa-university"></i>
+                    <h3>بكالوريوس الهندسة الزراعية</h3>
+                    <span class="degree-info">[اسم الجامعة، المدينة، الدولة]</span>
+                    <span class="degree-info">[سنة التخرج]</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section - Timeline -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>الخبرات العملية</h2>
+            </div>
+            
+            <div class="experience-timeline">
+                <!-- Experience Item 1 -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-item-content">
+                        <h3>[المسمى الوظيفي الأحدث]</h3>
+                        <span class="company-name">[اسم الشركة / المؤسسة]</span>
+                        <span class="duration">[تاريخ البدء] – [تاريخ الانتهاء أو "حتى الآن"]</span>
+                        <ul>
+                            <li>أشرفت على تطوير وتنفيذ نظم ري حديثة أدت إلى توفير X% من استهلاك المياه في مشروع بمساحة Y فدان.</li>
+                            <li>قمت بإدارة فرق عمل متعددة التخصصات لزيادة إنتاجية محصول Z بنسبة W% من خلال تطبيق برامج تسميد عضوية.</li>
+                            <li>طوّرت استراتيجيات لمكافحة الآفات والأمراض النباتية باستخدام طرق بيولوجية، مما خفض الحاجة للمبيدات الكيميائية بنسبة V%.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-item-content">
+                        <h3>[المسمى الوظيفي السابق]</h3>
+                        <span class="company-name">[اسم الشركة / المؤسسة]</span>
+                        <span class="duration">[تاريخ البدء] – [تاريخ الانتهاء]</span>
+                        <ul>
+                            <li>ساهمت في تصميم وتنفيذ أنظمة زراعة مائية متقدمة لإنتاج الخضروات الورقية في بيئة متحكم بها.</li>
+                            <li>أجريت تحليلات شاملة للتربة والمياه لتحديد أفضل الممارسات الزراعية وتحسين جودة المحاصيل.</li>
+                            <li>قدمت استشارات فنية للمزارعين حول اختيار المحاصيل المناسبة لظروف التربة والمناخ المحلي.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 (Example) -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-item-content">
+                        <h3>[مسمى وظيفي آخر أو تدريب]</h3>
+                        <span class="company-name">[اسم الشركة / المؤسسة]</span>
+                        <span class="duration">[تاريخ البدء] – [تاريخ الانتهاء]</span>
+                        <ul>
+                            <li>شاركت في أبحاث حول تأثير التغيرات المناخية على إنتاجية المحاصيل الرئيسية.</li>
+                            <li>قمت بتحليل البيانات الجغرافية المكانية (GIS) لتخطيط استخدامات الأراضي الزراعية بكفاءة.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research & Publications Section -->
+    <section class="research" id="research">
+        <div class="container">
+            <div class="section-title">
+                <h2>الأبحاث والمنشورات العلمية</h2>
+            </div>
+            
+            <div class="publications-grid">
+                <!-- Publication Card 1 -->
+                <div class="publication-card fade-in">
+                    <h3>[عنوان البحث 1: مثال: "تأثير تقنيات الري الذكي على استهلاك المياه وإنتاجية القمح"]</h3>
+                    <span class="journal-info"><i class="fas fa-journal-whills"></i> [اسم المجلة العلمية / المؤتمر]، [تاريخ النشر]</span>
+                    <p>ملخص موجز للبحث وأهم نتائجه أو مساهمته في المجال. يفضل أن يكون 2-3 أسطر.</p>
+                    <a href="#" class="btn" target="_blank">اقرأ البحث <i class="fas fa-external-link-alt"></i></a>
+                </div>
+
+                <!-- Publication Card 2 -->
+                <div class="publication-card fade-in">
+                    <h3>[عنوان البحث 2: مثال: "تحليل خصوبة التربة في الدلتا المصرية وتأثير الممارسات الزراعية"]</h3>
+                    <span class="journal-info"><i class="fas fa-journal-whills"></i> [اسم المجلة العلمية / المؤتمر]، [تاريخ النشر]</span>
+                    <p>ملخص موجز للبحث وأهم نتائجه أو مساهمته في المجال. يفضل أن يكون 2-3 أسطر.</p>
+                    <a href="#" class="btn" target="_blank">اقرأ البحث <i class="fas fa-external-link-alt"></i></a>
+                </div>
+
+                <!-- Publication Card 3 -->
+                <div class="publication-card fade-in">
+                    <h3>[عنوان البحث 3: مثال: "استخدام الطائرات بدون طيار في مراقبة صحة المحاصيل"]</h3>
+                    <span class="journal-info"><i class="fas fa-journal-whills"></i> [اسم المجلة العلمية / المؤتمر]، [تاريخ النشر]</span>
+                    <p>ملخص موجز للبحث وأهم نتائجه أو مساهمته في المجال. يفضل أن يكون 2-3 أسطر.</p>
+                    <a href="#" class="btn" target="_blank">اقرأ البحث <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>المهارات</h2>
+            </div>
+
+            <div class="skills-content">
+                <div class="skills-category fade-in">
+                    <h3>المهارات التقنية والفنية</h3>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-tint"></i> نظم الري الحديثة</li>
+                        <li><i class="fas fa-vial"></i> تحليل التربة والمياه</li>
+                        <li><i class="fas fa-leaf"></i> إدارة تغذية النبات والتسميد</li>
+                        <li><i class="fas fa-bug"></i> مكافحة الآفات والأمراض (IPM)</li>
+                        <li><i class="fas fa-seedling"></i> الزراعة العضوية والمستدامة</li>
+                        <li><i class="fas fa-map-marked-alt"></i> نظم المعلومات الجغرافية (GIS)</li>
+                        <li><i class="fas fa-satellite-dish"></i> الاستشعار عن بعد</li>
+                        <li><i class="fas fa-project-diagram"></i> إدارة المشاريع الزراعية</li>
+                        <li><i class="fas fa-chart-bar"></i> تحليل البيانات الزراعية</li>
+                        <li><i class="fas fa-dna"></i> زراعة الأنسجة النباتية</li>
+                        <li><i class="fas fa-water"></i> تقنيات الزراعة المائية</li>
+                    </ul>
+                </div>
+
+                <div class="skills-category fade-in">
+                    <h3>المهارات الشخصية واللغات</h3>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-users"></i> العمل الجماعي</li>
+                        <li><i class="fas fa-lightbulb"></i> حل المشكلات والابتكار</li>
+                        <li><i class="fas fa-comments"></i> التواصل الفعال</li>
+                        <li><i class="fas fa-handshake"></i> بناء العلاقات</li>
+                        <li><i class="fas fa-clock"></i> إدارة الوقت</li>
+                        <li><i class="fas fa-chart-line"></i> التفكير التحليلي</li>
+                        <li><i class="fas fa-globe"></i> العربية (اللغة الأم)</li>
+                        <li><i class="fas fa-globe"></i> الإنجليزية (متقدم)</li>
+                        <!-- Add more languages if applicable -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>تواصل معي</h2>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-form-wrapper fade-in">
+                    <h3>أرسل لي رسالة</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل</label>
+                            <input type="text" id="name" placeholder="اسمك الكريم" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" placeholder="example@domain.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">الموضوع</label>
+                            <input type="text" id="subject" placeholder="موضوع رسالتك" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" rows="6" placeholder="اذكر استفسارك أو تفاصيل مشروعك الزراعي" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">إرسال الرسالة <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+                
+                <div class="contact-info-wrapper">
+                    <div class="info-box fade-in">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info-text">
+                            <h3>العنوان</h3>
+                            <p>[المدينة، الدولة]</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-box fade-in">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="info-text">
+                            <h3>الهاتف</h3>
+                            <p dir="ltr">[+20 123 456 7890]</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-box fade-in">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info-text">
+                            <h3>البريد الإلكتروني</h3>
+                            <p><a href="mailto:[your.email@example.com]">[your.email@example.com]</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-box fade-in">
+                        <i class="fab fa-linkedin-in"></i>
+                        <div class="info-text">
+                            <h3>لينكدإن</h3>
+                            <p><a href="#" target="_blank">ملفي الشخصي على LinkedIn</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-box fade-in">
+                        <i class="fas fa-clock"></i>
+                        <div class="info-text">
+                            <h3>أوقات الاستشارة</h3>
+                            <p>الأحد - الخميس: 9ص - 5م</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">د. [اسمك]</div>
+                <p>مهندس زراعي ملتزم بتطوير حلول مستدامة لزراعة المستقبل وتحقيق الأمن الغذائي.</p>
+                <div class="footer-social-icons">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 د. [اسمك الكامل]. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - document.getElementById('header').offsetHeight,
+                        behavior: 'smooth'
+                    });
+                    
+                    document.querySelector('.nav-links').classList.remove('active');
+                }
+            });
+        });
+        
+        // Header shrink/background change on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 80) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+        
+        // Mobile navigation toggle (hamburger menu)
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Scroll-triggered fade-in effect for sections
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        
+        fadeElements.forEach(element => {
+            appearOnScroll.observe(element);
+        });
+
+        // Basic form submission (for demonstration, no backend)
+        document.querySelector('.contact-form-wrapper form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('تم استلام رسالتك بنجاح! شكراً لتواصلك.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
